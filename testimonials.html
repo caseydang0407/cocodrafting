@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Testimonials | Coco Drafting</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Space+Mono&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#8cd6a9",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#0047ab",
+                    "outline": "#737784",
+                    "on-primary-fixed-variant": "#00419e",
+                    "surface-tint": "#2559bd",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f6f3ef",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-tertiary-fixed": "#002111",
+                    "inverse-primary": "#b1c5ff",
+                    "surface-container-highest": "#e5e2de",
+                    "tertiary-container": "#005936",
+                    "surface-dim": "#dcdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#434653",
+                    "surface-bright": "#fcf9f5",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container": "#f0ede9",
+                    "surface-container-high": "#eae8e4",
+                    "background": "#fcf9f5",
+                    "on-secondary-container": "#656464",
+                    "inverse-on-surface": "#f3f0ec",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#001946",
+                    "surface-variant": "#e5e2de",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#a7f3c3",
+                    "secondary-container": "#e4e2e1",
+                    "on-surface": "#1c1c1a",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "outline-variant": "#c3c6d5",
+                    "on-primary-container": "#a5bdff",
+                    "primary": "#00327d",
+                    "surface": "#fcf9f5",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#83cea1",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#31302e",
+                    "on-background": "#1c1c1a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#005231",
+                    "tertiary": "#003f25",
+                    "secondary": "#5f5e5e",
+                    "on-secondary-fixed-variant": "#474746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "max-width": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "headline-xl-mobile": ["IBM Plex Sans"],
+                    "label-technical": ["Space Mono"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-md": ["IBM Plex Sans"],
+                    "footer-display": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-technical": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "footer-display": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .drafting-grid {
+            background-image: radial-gradient(#737784 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .vellum-effect {
+            position: relative;
+        }
+        .vellum-effect::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -4px;
+            bottom: -4px;
+            border: 1px solid #737784;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim border-b border-outline dark:border-outline-variant border-opacity-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="flex items-center gap-3 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Coco Drafting</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-200" href="#">Home</a>
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-200" href="#">About</a>
+<a class="text-primary border-b-2 border-primary font-medium transition-colors duration-200" href="#">Testimonials</a>
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-200" href="#">Pricing</a>
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-200" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95">
+                Consultation
+            </button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative py-20 drafting-grid bg-opacity-5">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest block mb-4">Case Studies &amp; Feedback</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-6">Client Perspectives</h1>
+<p class="max-w-2xl mx-auto text-secondary text-body-lg">
+                    Discover how our architectural precision and tropical warmth transform residential visions into detailed drafting realities.
+                </p>
+</div>
+</section>
+<!-- Testimonials Blog Layout -->
+<section class="py-12 md:py-24">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 gap-16">
+<!-- Entry 1 -->
+<article class="flex flex-col md:flex-row gap-8 md:gap-16 items-start group">
+<div class="w-full md:w-1/3 vellum-effect">
+<div class="aspect-[4/5] overflow-hidden rounded-xl border border-outline border-opacity-10 bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional middle-aged homeowner standing in front of a modern tropical house with large glass windows. The lighting is warm and golden hour, emphasizing the clean architectural lines of the building. The style is high-end architectural photography with a soft, inviting atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYnm5M-X-F7TrrBFtfqdKDmW-xL_TQyEceW4hk2UG3uI7w7F3w6TCJ7pPISOfnuGO4fKUqv2F4tvBGmCBTYGYtgEx5uh-IZsyvTJq4R_3hDoyCivquzTgGKLc9VO_7z6kHGoqVuhi1SRxed3w3I2a1DKlZYgzIuDEj1tW2z-qPj1XrtnQuhuHONiar27xWb0io8IlWO-7Zd-K-UnaH9PyGWqLEsc-MRydvfnF1hZoCBlAu7eK8NADt"/>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-2">PROJECT: THE PALMS ESTATE</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">"Absolute Precision Meets Human Understanding"</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8 italic">
+                                "Working with Coco Drafting was a masterclass in technical excellence. We came with a vague idea of a coastal retreat, and they translated it into blueprints that were both mathematically perfect and emotionally resonant. Their attention to structural integrity while maintaining that 'coconut' organic feel is unparalleled in the industry."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="h-px flex-grow bg-outline opacity-20"></div>
+<div class="text-right">
+<p class="font-bold text-on-surface">Eleanor Vance</p>
+<p class="font-label-technical text-label-technical text-secondary uppercase">Lead Developer, Vance &amp; Co.</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Entry 2 -->
+<article class="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start group">
+<div class="w-full md:w-1/3 vellum-effect">
+<div class="aspect-[4/5] overflow-hidden rounded-xl border border-outline border-opacity-10 bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A young professional architect or client reviewing architectural blueprints on a wooden table. The setting is a bright, sunlit studio with tropical plants in the background. The aesthetic is clean, minimalist, and focuses on technical detail and paper textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8FuRIb1e98HfcYB2dxTPvGDehSAf5fdi772LyTtcD8MCqRDuEet0NR7N7ZTPoVielLKByrtJ1ZEg0mQnL3fKORqEI1hAge6ZaJxX6WPnG9cqu3KE9H5FbQGzmNukXLC6WChkGe20EAmuPhzLpPb1UGZYTca5u5vCRTdRN730VyTaWMtjHPkxfI6ZE18C3FQZe_ZB7BOejEuiJq3kxLv1ZRTIiO5IjhaeUzC1bndbD_4-OYmR0FSBn"/>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+</div>
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-2">PROJECT: MODERN MONSTERA ANNEX</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">"The Blueprint of Our Dreams"</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8 italic">
+                                "As a homeowner, the drafting process always felt intimidatingly technical. Coco Drafting made it accessible. Their 12-column grid precision gave me confidence that every measurement was sound, while their boutique approach made me feel heard. The final drawings were pieces of art themselves."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="text-left">
+<p class="font-bold text-on-surface">Marcus Thorne</p>
+<p class="font-label-technical text-label-technical text-secondary uppercase">Private Homeowner</p>
+</div>
+<div class="h-px flex-grow bg-outline opacity-20"></div>
+</div>
+</div>
+</article>
+<!-- Entry 3 (Featured Bento Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12">
+<div class="lg:col-span-2 bg-surface-container-low p-12 rounded-xl border border-outline border-opacity-10 vellum-effect">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+<span class="material-symbols-outlined text-tertiary fill-icon">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">"Scale and Soul"</h3>
+<p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                                "The technical specs were spot on, SCALE 1:100 perfection. But what truly set Coco Drafting apart was their ability to integrate the tropical environment into the rigid constraints of a blueprint. They don't just draw walls; they draft experiences."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-primary">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a satisfied woman in her 30s with a professional yet creative look. Soft natural lighting, minimal studio background, high-key white aesthetic matching the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmaw-TF91nYPLyMcVq0WreFPK6ezcr5K6EwdbwWGFNZbmrFNOh9P2tvfzWrrxbxVmqeja4H-uGt10vDItW2Mn9PGWdKx0vylb1ys18Gg6cyXTfSvcJ2CwjQXmmMRDlpL9ysizRzXizhfxyKlJ6qRH1YG1wATKkRqXeaGPsuO1Y_Fi5dXdZBKjq5LehmY_Jg0fG_gjAPsm9cC7L4jj2Y2_OLU1_tU7XfZCspSjAijHhKdrGIZdWt14"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Sienna Rivera</p>
+<p class="font-label-technical text-label-technical text-secondary uppercase">Rivera Architecture Studio</p>
+</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-12 rounded-xl flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-6xl mb-6">format_quote</span>
+<p class="font-headline-md text-headline-md mb-4">98%</p>
+<p class="font-label-technical text-label-technical uppercase">Precision Rating from Local Contractors</p>
+</div>
+</div>
+<!-- More List Items (Minimalist) -->
+<div class="space-y-12">
+<div class="border-t border-outline border-opacity-10 pt-12 flex flex-col md:flex-row justify-between gap-6">
+<div class="md:w-1/4">
+<p class="font-bold text-on-surface">Dr. Julian Hayes</p>
+<p class="font-label-technical text-label-technical text-secondary uppercase">Project: Wellness Pavilion</p>
+</div>
+<div class="md:w-2/3">
+<p class="text-on-surface-variant leading-relaxed italic">"Extremely thorough. Every coordinate marker was perfectly placed. Their documentation passed the city review on the first attempt without a single revision required."</p>
+</div>
+<div class="md:w-auto text-tertiary font-bold">5.0 / 5.0</div>
+</div>
+<div class="border-t border-outline border-opacity-10 pt-12 flex flex-col md:flex-row justify-between gap-6">
+<div class="md:w-1/4">
+<p class="font-bold text-on-surface">Clara Beaumont</p>
+<p class="font-label-technical text-label-technical text-secondary uppercase">Project: Bamboo Heights</p>
+</div>
+<div class="md:w-2/3">
+<p class="text-on-surface-variant leading-relaxed italic">"A seamless bridge between engineering and artistry. They captured the organic flow of our property while adhering to the strictest architectural standards."</p>
+</div>
+<div class="md:w-auto text-tertiary font-bold">5.0 / 5.0</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container-highest">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Ready to start your draft?</h2>
+<p class="mb-10 text-secondary max-w-lg mx-auto">Join our list of satisfied clients and bring your architectural vision to life with technical precision.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-medium hover:bg-primary-container transition-all">Book a Consultation</button>
+<button class="border border-on-surface text-on-surface px-10 py-4 rounded-lg font-medium hover:bg-surface-container transition-all">View Our Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline dark:border-outline-variant border-opacity-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<span class="font-footer-display text-footer-display text-on-surface">Coco Drafting</span>
+</div>
+<p class="max-w-xs font-body-sm text-body-sm text-secondary">
+                    Bridging the gap between technical drafting and tropical soul. Precise drawings for visionary homes.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-4">
+<span class="font-label-technical text-label-technical uppercase text-on-surface opacity-50">Sitemap</span>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all active:scale-95 inline-block" href="#">Home</a></li>
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all active:scale-95 inline-block" href="#">About</a></li>
+<li><a class="font-body-sm text-body-sm text-primary font-bold hover:text-primary transition-all active:scale-95 inline-block" href="#">Testimonials</a></li>
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all active:scale-95 inline-block" href="#">Pricing</a></li>
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all active:scale-95 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-technical text-label-technical uppercase text-on-surface opacity-50">Connect</span>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all inline-block" href="#">Instagram</a></li>
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all inline-block" href="#">LinkedIn</a></li>
+<li><a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-all inline-block" href="#">Architectural Digest</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col justify-between items-end">
+<div class="font-label-technical text-label-technical text-secondary uppercase bg-surface-container px-3 py-1 rounded">
+                    EST. 2024
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface dark:text-on-surface-variant mt-4 md:mt-0">
+                    © 2024 Coco Drafting. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for the vellum effect
+        document.querySelectorAll('.vellum-effect').forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ghost = el.querySelector('::after');
+                // Note: Can't directly animate ::after with JS easily, 
+                // but we could apply a class or use a real div if more complex
+            });
+        });
+
+        // Add "active" state hover effect to buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>
