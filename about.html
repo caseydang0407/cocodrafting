@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Coco Drafting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Space+Mono&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#8cd6a9",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#0047ab",
+                    "outline": "#737784",
+                    "on-primary-fixed-variant": "#00419e",
+                    "surface-tint": "#2559bd",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f6f3ef",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-tertiary-fixed": "#002111",
+                    "inverse-primary": "#b1c5ff",
+                    "surface-container-highest": "#e5e2de",
+                    "tertiary-container": "#005936",
+                    "surface-dim": "#dcdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#434653",
+                    "surface-bright": "#fcf9f5",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container": "#f0ede9",
+                    "surface-container-high": "#eae8e4",
+                    "background": "#fcf9f5",
+                    "on-secondary-container": "#656464",
+                    "inverse-on-surface": "#f3f0ec",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#001946",
+                    "surface-variant": "#e5e2de",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#a7f3c3",
+                    "secondary-container": "#e4e2e1",
+                    "on-surface": "#1c1c1a",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "outline-variant": "#c3c6d5",
+                    "on-primary-container": "#a5bdff",
+                    "primary": "#00327d",
+                    "surface": "#fcf9f5",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#83cea1",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#31302e",
+                    "on-background": "#1c1c1a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#005231",
+                    "tertiary": "#003f25",
+                    "secondary": "#5f5e5e",
+                    "on-secondary-fixed-variant": "#474746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "max-width": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "headline-xl-mobile": ["IBM Plex Sans"],
+                    "label-technical": ["Space Mono"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-md": ["IBM Plex Sans"],
+                    "footer-display": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-technical": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "footer-display": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .architectural-grid {
+        background-image: radial-gradient(circle, #737784 1px, transparent 1px);
+        background-size: 32px 32px;
+        opacity: 0.05;
+      }
+      .blueprint-overlay {
+        background-color: rgba(0, 50, 125, 0.03);
+      }
+      .marker-plus::before {
+        content: '+';
+        font-family: 'Space Mono', monospace;
+        margin-right: 8px;
+        color: #00327d;
+      }
+      .border-draft {
+        border: 1px solid rgba(28, 28, 26, 0.1);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline opacity-100 flex items-center justify-between h-20 px-margin-mobile md:px-margin-desktop shadow-none">
+<div class="max-w-max-width mx-auto w-full flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">Coco Drafting</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary hover:text-primary transition-colors font-normal" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary font-medium" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-colors font-normal" href="#">Testimonials</a>
+<a class="text-secondary hover:text-primary transition-colors font-normal" href="#">Pricing</a>
+<a class="text-secondary hover:text-primary transition-colors font-normal" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95">
+                Consultation
+            </button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-32">
+<div class="absolute inset-0 architectural-grid pointer-events-none"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative">
+<span class="font-label-technical text-label-technical text-primary uppercase mb-4 block tracking-widest">EST. 2018 / MISSION</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface max-w-4xl mb-8">
+                    Bridging the gap between <span class="text-primary">technical precision</span> and human warmth.
+                </h1>
+<p class="text-secondary max-w-2xl text-body-lg">
+                    At Coco Drafting, we believe that every blueprint is a promise of a future space. Our mission is to provide architects, developers, and homeowners with meticulous drafting services that blend the rigidity of structural engineering with the fluidity of organic living.
+                </p>
+</div>
+</section>
+<!-- Company History & What We Do -->
+<section class="py-24 bg-surface-container-low border-y border-outline border-opacity-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 space-y-12">
+<div class="p-8 bg-surface border-draft rounded-xl relative">
+<div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary -translate-x-1 -translate-y-1 opacity-20"></div>
+<h2 class="font-headline-md text-headline-md mb-6">Our Legacy</h2>
+<p class="text-secondary mb-4">
+                            Founded in a small coastal studio, Coco Drafting was born from the realization that technical drawings often lacked the "soul" of the projects they represented. 
+                        </p>
+<p class="text-secondary">
+                            Starting with just three founders and a single drafting table, we have grown into a multi-disciplinary boutique firm serving over 500 successful residential and commercial developments.
+                        </p>
+</div>
+<ul class="space-y-4">
+<li class="marker-plus font-label-technical text-primary">PRECISION IN SCALE</li>
+<li class="marker-plus font-label-technical text-primary">SUSTAINABLE BLUEPRINTS</li>
+<li class="marker-plus font-label-technical text-primary">ADAPTIVE COLLABORATION</li>
+<li class="marker-plus font-label-technical text-primary">TECHNICAL INTEGRITY</li>
+</ul>
+</div>
+<div class="md:col-span-7 flex flex-col justify-center">
+<div class="aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-sm border border-outline border-opacity-20 group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, bright architectural drafting office featuring high ceilings, large wooden drafting tables, and minimal decor. Large windows let in soft, warm daylight, illuminating rolls of vellum paper and professional plotting equipment. The aesthetic is modern and organized, reflecting a technical yet grounded professional environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbh32qSfWgB3WId2tyG_qg3pif1PdEkQsYAHD5MnqMxWDx85ZXCWmcMtPf_YziOku6lsMPefRQWHOxAkFkl44khqfNUb9qotN_mX3cYBo12tRbx4d1qvqNNarEqB3uP6o1jBE2UWl4xZ3YYyJzJb1_SakX-rFk4Twii9iO_Yw_17cK5h4YZP6Nx-NWY3hp1rBU92lCG1sSStKfgYjOs-D1iZigUhwG71GsmdineE6W9NalYnBaCsv3"/>
+<div class="absolute bottom-4 right-4 bg-surface p-4 rounded-lg shadow-md border-draft">
+<p class="font-label-technical text-xs text-on-surface opacity-60 uppercase">Reference 01: HQ Studio View</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founders & Team -->
+<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="font-label-technical text-label-technical text-primary uppercase block mb-2">THE ARCHITECTS OF OUR PROCESS</span>
+<h2 class="font-headline-md text-headline-md">Leadership &amp; Team</h2>
+</div>
+<p class="text-secondary max-w-md text-body-sm">
+                    A collective of technical drafters, engineers, and visionaries committed to making your documentation flawless.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Giang Mai -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 border-draft relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Giang Mai, a professional woman with a confident, approachable demeanor. She is dressed in a smart, minimal linen shirt. The background is a soft-focus architectural studio with blueprint sketches. The lighting is warm and natural, following the clean light-mode aesthetic of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi8gJmV-YCo2J1L_iVhyi8BICleczHWohIyTu43J_Z0XrJ-DsKjRdd1v1maicmvNWhc_QgJwknMIv4cUjfpU9pn-UJfpX0-wiZ8D-BgqxUKA9GRpvBH8P7hKj_tEBe-0anhAA7B2gq7peNn65ZlpqbFCs7X4wlM4a283kOO6M8r6iN9RlHSeTLv_sAajiiAe83tOhELTsOGxrSJm5JQ-ImgfEN-RrW6Zy6-WqzSUOQrmtGnW5Ke2je"/>
+<div class="absolute inset-0 blueprint-overlay opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-xl font-bold">Giang Mai</h3>
+<p class="font-label-technical text-primary text-xs uppercase tracking-widest">Co-Founder / Principal Drafter</p>
+<p class="text-secondary text-body-sm leading-relaxed pt-2">
+                            With 15 years in civil engineering, Giang ensures every line meets international standards while maintaining the project's creative intent.
+                        </p>
+</div>
+</div>
+<!-- Thinh Xa Mau -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 border-draft relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Thinh Xa Mau, a man in his late 30s with professional, sharp attire. He stands in a bright, modern office space. The style is minimalist and high-end, focusing on a clean professional look with subtle architectural elements in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQ5ciAypDlwyHJAapVPESE8RR9Ww6Q4qS_5Wy8AQSlUJBgYA1D506TkPCSYc_7wV_Mty0Uqwmpc82rfnz_O5fhnIIoLdrKrsKzGKd5bogY3hAFwchF52lZkt8qcuw8J-YZwgPMWKBEcS__7w3AeiXe_ZXJR-d_iycnEbd4dKN1kZthOD9DnfyUY8zC721jrfmN4Cv-OD9ebTbQhhzPWZvlnb7tFDWHBdNp2ygZ00ifuP-S7s9jr5I"/>
+<div class="absolute inset-0 blueprint-overlay opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-xl font-bold">Thinh Xa Mau</h3>
+<p class="font-label-technical text-primary text-xs uppercase tracking-widest">Co-Founder / CTO</p>
+<p class="text-secondary text-body-sm leading-relaxed pt-2">
+                            Thinh pioneered our proprietary CAD workflows, focusing on automating the mundane to let our team focus on precision details.
+                        </p>
+</div>
+</div>
+<!-- Truc Mim -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 border-draft relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Truc Mim, a woman with an artistic yet professional appearance. She is surrounded by architectural models and sketches in a brightly lit studio. The overall feel is warm, technical, and creative, emphasizing her role as a visionary in the drafting field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATzUtWa2xtkxhk49gaSNIkBXbqKxORRCqb8RWtPUoymsPFUbFfkl3_NBbQjQ7-dfqTwztVDGmm171teQ37B0kexYeAGwBZrj7CxMkbEPKiraRTxNzPXMOQDTxv-MzLbdSKv5XClqtCA4wBIrjcp5tV-sdmBZYRUQEDffbYciwD-EdOCYRJmgFspXCMGcsP5qQMsBCn6uRjPW2yi3N1SdsD2t5Ga6Sz6guwsOm-7UaxQmeA4jyFHrbH"/>
+<div class="absolute inset-0 blueprint-overlay opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-xl font-bold">Truc Mim</h3>
+<p class="font-label-technical text-primary text-xs uppercase tracking-widest">Co-Founder / Design Director</p>
+<p class="text-secondary text-body-sm leading-relaxed pt-2">
+                            Truc brings a background in tropical landscape architecture, infusing our technical work with a sense of environmental harmony.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Employee Grid (Condensed) -->
+<div class="mt-20 pt-20 border-t border-outline border-opacity-10">
+<h4 class="font-label-technical text-primary text-xs uppercase mb-12 tracking-widest text-center">Support &amp; Technical Staff</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full mx-auto mb-4 border-draft overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up professional headshot of a junior architectural drafter, clean lighting, white background, minimalist and technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN_mGROb1XjURUzED_3_DFsyUduF0Tuv9tcN2-t0n2I_q44RViiX0M_qvMTF86rhwSJFwMduuZb2TBQqnpi2A2jtCZ1ZX9aGxmLOq004Bzb4720jWw7gqLX9UrH9GYLNZMJ7LKUKk-LNCneDMxqsU9vrLiVq-p-H8eeBgh84g-50r79NA6CjKL2mBSUbNlLZjA1kOrzUGcbXiFK3dhyHpVr7w1qZq-lF2p99bobzrcQG2qIKuzS4Ih"/>
+</div>
+<p class="font-bold text-sm">Le Tuan</p>
+<p class="text-xs text-secondary">Senior Drafter</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full mx-auto mb-4 border-draft overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up professional headshot of a female architectural technician, bright studio lighting, modern minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAfiI8-xa1jyXeOE-Bz2Kts-Adl0YMsHZ2J5kdSOhp76C-XNpPbO5nfQw7JXk5Q4h27Yhc9GBAUB7C_FGSu8f9dMVOq7p6l0tWxNUO2fMVFsgh81HCQ5MsCYITEqAwEm5MCUZnzNX8mLnxaG0b00p9AYjSnWoT1S97BtqdDCugW9yWrnR1oKCGWOmpvYfuudxWkG52D2M6OkTsUA6Z3Yxq_q1Ib76ezLUxog7wo63Si4pCQvgWGvmG"/>
+</div>
+<p class="font-bold text-sm">Minh Ha</p>
+<p class="text-xs text-secondary">Technical Lead</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full mx-auto mb-4 border-draft overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up professional headshot of a male operations manager, clean minimalist setting, neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWMmRNzU7pYVzenREC8zbgYxFt7JKJmXdB79S8cy7kIH00PzjBWbi7djqwLwjQHzjmZUnfdwygk4Zmqd1g22zsZHTljzgEzZ20PoWJCjzHbbwzL0JqVGMRu720Z6puGvDRA4QW2O5P3im5pagzv2f2yHQqO9o3PJ4O-iCYBSH9dvLhFftPNoweuXJUkGAAztkL7azl_kph9c0ZzLPbXGu1dI9-TDY1KHUtlDbEZf4fo6rhZwji9dH"/>
+</div>
+<p class="font-bold text-sm">Nguyen Son</p>
+<p class="text-xs text-secondary">Operations</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full mx-auto mb-4 border-draft overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up professional headshot of a female customer relations specialist in an architectural office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDosAgA6aV3W66KoOFoXt0iGu11sdVOz01j0VuFSrRJgR6pyslBhvb7Uoaovx-8duGNs3cvsmMJmXWMUetGT5vkgN2auJnFBfVU-AVT-JvKlg0NteLc3yua25aLGf5HT_6ukRiHJ0j5DdntZ7I8NVbxUJpvrI9paf2E9nxFRWG5_r-G3RFclqHK3uEcOpB-j00I-plpcBdcOrYKZBgIIoNla3yOr0oV4BoPucOJKWhK7mXMeDaNT1DZ"/>
+</div>
+<p class="font-bold text-sm">Anh Tuyet</p>
+<p class="text-xs text-secondary">Client Relations</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-on-primary text-center">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-headline-md text-headline-md mb-6 text-on-primary">Ready to draft your future?</h2>
+<p class="opacity-80 mb-10 text-body-lg">Connect with our team today to start your architectural documentation with precision.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-surface text-primary px-10 py-4 rounded-lg font-bold hover:bg-surface-container-high transition-all active:scale-95">Get a Quote</button>
+<button class="border-2 border-surface text-surface px-10 py-4 rounded-lg font-bold hover:bg-surface hover:text-primary transition-all active:scale-95">View Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low border-t border-outline border-opacity-10">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter">
+<div class="space-y-6 md:w-1/3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">architecture</span>
+<span class="font-footer-display text-footer-display text-on-surface">Coco Drafting</span>
+</div>
+<p class="text-body-sm text-secondary leading-relaxed">
+                    A technical studio specializing in precise architectural documentation and planning. Bringing clarity to complex builds.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8 md:w-1/2">
+<div class="space-y-4">
+<p class="font-label-technical text-primary text-xs uppercase font-bold">Navigation</p>
+<nav class="flex flex-col gap-2">
+<a class="text-secondary text-body-sm hover:text-primary transition-all" href="#">Home</a>
+<a class="text-primary text-body-sm font-bold" href="#">About</a>
+<a class="text-secondary text-body-sm hover:text-primary transition-all" href="#">Testimonials</a>
+</nav>
+</div>
+<div class="space-y-4">
+<p class="font-label-technical text-primary text-xs uppercase font-bold">Company</p>
+<nav class="flex flex-col gap-2">
+<a class="text-secondary text-body-sm hover:text-primary transition-all" href="#">Pricing</a>
+<a class="text-secondary text-body-sm hover:text-primary transition-all" href="#">Contact</a>
+<a class="text-secondary text-body-sm hover:text-primary transition-all" href="#">Privacy</a>
+</nav>
+</div>
+<div class="space-y-4 col-span-2 sm:col-span-1">
+<p class="font-label-technical text-primary text-xs uppercase font-bold">Contact</p>
+<p class="text-secondary text-body-sm">hello@cocodrafting.com<br/>+1 (555) ARCH-DOC</p>
+</div>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline border-opacity-5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-on-secondary-container">© 2024 Coco Drafting. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors">share</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors">mail</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors">public</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Draft hover effect
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Subtle scale or interaction logic
+            });
+        });
+
+        // Navigation Highlight logic is already set to 'About' based on user request.
+    </script>
+</body></html>
